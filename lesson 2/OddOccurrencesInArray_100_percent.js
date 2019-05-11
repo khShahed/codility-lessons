@@ -2,24 +2,21 @@
  * Problem Link: https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
  *
  *
- * This solution scored 66%. Time complexity was O(N**2). Got timeout error for 3 test case.
+ * This solution scored 100%. Time complexity was O(N) or O(N*log(N)).
  */
 
 
 function solution(A) {
-  let unpairedValues = [];
-  console.log(A);
+  let unpairedValues = {};
   A.forEach(value => {
-    if (unpairedValues.includes(value)) {
-      unpairedValues = unpairedValues.filter(uv => uv !== value);
+    if (unpairedValues.hasOwnProperty(value.toString())) {
+      delete unpairedValues[value.toString()];
     } else {
-      unpairedValues.push(value);
+      unpairedValues[value.toString()] = true;
     }
   });
-
-  return unpairedValues[0];
+  return parseInt(Object.keys(unpairedValues)[0]);
 }
-
 console.time("array-initialization");
 let array = [];
 for (let i = 0; i < 100002; i++ ) {
