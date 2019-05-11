@@ -1,0 +1,12 @@
+{
+  "name": "codility-lessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MD KAMRUL HASAN SHAHED",
+  "git repository": "https://github.com/khShahed/codility-lessons",
+  "license": "ISC"
+}
